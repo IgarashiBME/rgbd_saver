@@ -59,7 +59,8 @@ class rgbd_saver():
             except AttributeError:
                 continue
 
-            cv2.imshow("", self.cv_image)
+            cv2.imshow("rgb", self.cv_image)
+            cv2.imshow("depth", self.cv_image_depth)
             key = cv2.waitKey(1)
 
             # save images
@@ -84,12 +85,6 @@ class rgbd_saver():
                 self.group_number = self.group_number +1
                 print("move to the next group_number", self.group_number)
                 self.seq = 1
-
-            # change image 
-            if key == ord("c"):
-                image_src = self.cv_image_depth
-
-                print("change image")
 
             if key == 27: #[esc] key
                 break
