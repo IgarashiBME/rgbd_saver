@@ -1,0 +1,3 @@
+Create images/ directory in your home directory.  
+
+roslaunch rgbd_saver saver.launch
