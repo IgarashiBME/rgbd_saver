@@ -8,7 +8,7 @@ import cv2
 from cv_bridge import CvBridge, CvBridgeError
 from sensor_msgs.msg import Image
 
-class uvc_image():
+class rgbd_saver():
     def __init__(self):
         rospy.init_node('camera_save_node')
         rospy.on_shutdown(self.shutdown)
@@ -95,5 +95,5 @@ class uvc_image():
                 break
     
 if __name__ == '__main__':
-    u = uvc_image()
-    u.loop()
+    r = rgbd_saver()
+    r.loop()
