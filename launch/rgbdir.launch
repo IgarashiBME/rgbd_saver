@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="rgbd_saver" type="rgbdir.py" name="rgbdir" output="screen">
+  </node>
+</launch>
